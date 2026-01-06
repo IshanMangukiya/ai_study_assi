@@ -10,7 +10,7 @@ from openai import OpenAI
 load_dotenv()
 
 # OpenAI client
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key="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")
 
 st.set_page_config(page_title="AI Study Assistant", layout="wide")
 
@@ -107,6 +107,7 @@ st.subheader("🕘 Question History")
 for q, a in reversed(st.session_state.history):
     with st.expander(q):
         st.write(a)
+
 
 
 
